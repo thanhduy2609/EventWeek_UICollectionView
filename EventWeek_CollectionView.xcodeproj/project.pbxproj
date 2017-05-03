@@ -14,6 +14,12 @@
 		3069FA791EB8E32D0087AD66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3069FA771EB8E32D0087AD66 /* LaunchScreen.storyboard */; };
 		3069FA841EB8E32E0087AD66 /* EventWeek_CollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069FA831EB8E32E0087AD66 /* EventWeek_CollectionViewTests.swift */; };
 		3069FA8F1EB8E32E0087AD66 /* EventWeek_CollectionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069FA8E1EB8E32E0087AD66 /* EventWeek_CollectionViewUITests.swift */; };
+		3069FA9F1EB8E3570087AD66 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069FA9D1EB8E3570087AD66 /* Event.swift */; };
+		3069FAA01EB8E3570087AD66 /* EventInDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069FA9E1EB8E3570087AD66 /* EventInDay.swift */; };
+		3069FAA31EB8E6200087AD66 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069FAA21EB8E6200087AD66 /* HeaderView.swift */; };
+		3069FAA51EB8E7090087AD66 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069FAA41EB8E7090087AD66 /* EventCell.swift */; };
+		3069FAA81EB8E7CE0087AD66 /* EventCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069FAA71EB8E7CE0087AD66 /* EventCollectionViewController.swift */; };
+		3069FAAA1EB8F1030087AD66 /* DetailEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069FAA91EB8F1030087AD66 /* DetailEventViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		3069FA8A1EB8E32E0087AD66 /* EventWeek_CollectionViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventWeek_CollectionViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3069FA8E1EB8E32E0087AD66 /* EventWeek_CollectionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventWeek_CollectionViewUITests.swift; sourceTree = "<group>"; };
 		3069FA901EB8E32E0087AD66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3069FA9D1EB8E3570087AD66 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		3069FA9E1EB8E3570087AD66 /* EventInDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInDay.swift; sourceTree = "<group>"; };
+		3069FAA21EB8E6200087AD66 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		3069FAA41EB8E7090087AD66 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		3069FAA71EB8E7CE0087AD66 /* EventCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionViewController.swift; sourceTree = "<group>"; };
+		3069FAA91EB8F1030087AD66 /* DetailEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailEventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +109,11 @@
 		3069FA6D1EB8E32D0087AD66 /* EventWeek_CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				3069FA9C1EB8E3350087AD66 /* New Group */,
+				3069FAA61EB8E7B20087AD66 /* Controllers */,
+				3069FAA11EB8E5F80087AD66 /* Views */,
+				3069FA9C1EB8E3350087AD66 /* Models */,
 				3069FA6E1EB8E32D0087AD66 /* AppDelegate.swift */,
 				3069FA701EB8E32D0087AD66 /* ViewController.swift */,
-				3069FA721EB8E32D0087AD66 /* Main.storyboard */,
 				3069FA751EB8E32D0087AD66 /* Assets.xcassets */,
 				3069FA771EB8E32D0087AD66 /* LaunchScreen.storyboard */,
 				3069FA7A1EB8E32D0087AD66 /* Info.plist */,
@@ -126,11 +139,32 @@
 			path = EventWeek_CollectionViewUITests;
 			sourceTree = "<group>";
 		};
-		3069FA9C1EB8E3350087AD66 /* New Group */ = {
+		3069FA9C1EB8E3350087AD66 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3069FA9D1EB8E3570087AD66 /* Event.swift */,
+				3069FA9E1EB8E3570087AD66 /* EventInDay.swift */,
 			);
-			name = "New Group";
+			name = Models;
+			sourceTree = "<group>";
+		};
+		3069FAA11EB8E5F80087AD66 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3069FA721EB8E32D0087AD66 /* Main.storyboard */,
+				3069FAA21EB8E6200087AD66 /* HeaderView.swift */,
+				3069FAA41EB8E7090087AD66 /* EventCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3069FAA61EB8E7B20087AD66 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3069FAA91EB8F1030087AD66 /* DetailEventViewController.swift */,
+				3069FAA71EB8E7CE0087AD66 /* EventCollectionViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +301,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3069FAA31EB8E6200087AD66 /* HeaderView.swift in Sources */,
 				3069FA711EB8E32D0087AD66 /* ViewController.swift in Sources */,
+				3069FA9F1EB8E3570087AD66 /* Event.swift in Sources */,
+				3069FAA01EB8E3570087AD66 /* EventInDay.swift in Sources */,
+				3069FAA51EB8E7090087AD66 /* EventCell.swift in Sources */,
+				3069FAA81EB8E7CE0087AD66 /* EventCollectionViewController.swift in Sources */,
+				3069FAAA1EB8F1030087AD66 /* DetailEventViewController.swift in Sources */,
 				3069FA6F1EB8E32D0087AD66 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +555,7 @@
 				3069FA951EB8E32E0087AD66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3069FA961EB8E32E0087AD66 /* Build configuration list for PBXNativeTarget "EventWeek_CollectionViewTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +564,7 @@
 				3069FA981EB8E32E0087AD66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3069FA991EB8E32E0087AD66 /* Build configuration list for PBXNativeTarget "EventWeek_CollectionViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +573,7 @@
 				3069FA9B1EB8E32E0087AD66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
