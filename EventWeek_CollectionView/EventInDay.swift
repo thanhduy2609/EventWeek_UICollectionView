@@ -12,9 +12,7 @@ class EventInDay{
     //create variables
     var day: String // name of day
     var events: [Event] // all events in day
-    static var eventsStaturDay: [Event] = []
-    static var eventsMonday: [Event] = []
-    
+
 
     init(day: String, includeEvents: [Event]){
         self.day = day;
@@ -26,34 +24,16 @@ class EventInDay{
         , self.eventInFriday(), self.eventInSaturday() ,self.eventInSunday()];
     }
     
-     class func addMoreEvent(event: Event, day: String) -> Void{
-        if day == "Monday" {
-            //eventInMonday().events.removeAll()
-            //eventsMonday.append(event)
-            //eventInMonday().events = eventsMonday
-            //EventInDay.eventInSaturday().events.append(event);
-            
-            //eventsMonday.removeAll()
-            let eventTemp: [Event] = eventInMonday().events;
-            eventsMonday.removeAll();
-            eventsMonday = eventTemp
-            eventsMonday.append(event);
-            //var eventInDay: EventInDay = eventInMonday()
-            //eventInMonday().events.append(event)
-            
-        }
-        
-    }
     
     //create data
     private class func eventInMonday() -> EventInDay{
         //Monday has 2 events
-       // var events = [Event]();
+       var events = [Event]();
         //eventsMonday.removeAll()
-        eventsMonday.append(Event(title: "Event 1 - Monday", description: "Description of Event 1 - Monday", address: "Võ văn ngân"));
-         eventsMonday.append(Event(title: "Event 2 - Monday", description: "Description of Event 2 - Monday", address: "Võ văn ngân"));
+        events.append(Event(title: "Event 1 - Monday", description: "Description of Event 1 - Monday", address: "Võ văn ngân"));
+         events.append(Event(title: "Event 2 - Monday", description: "Description of Event 2 - Monday", address: "Võ văn ngân"));
         
-        return EventInDay(day: "Monday", includeEvents: eventsMonday)
+        return EventInDay(day: "Monday", includeEvents: events)
 
     }
     
@@ -113,16 +93,16 @@ class EventInDay{
     //create data
     private class func eventInSaturday() -> EventInDay{
         //Monday has 4 events
-        //var events = [Event]();
+        var events = [Event]();
         
-        eventsStaturDay.append(Event(title: "Event 1 - Saturday", description: "Description of Event 1 - Saturday", address: "Võ văn ngân"));
-        eventsStaturDay.append(Event(title: "Event 2 - Saturday", description: "Description of Event 2 - Saturday", address: "Võ văn ngân"));
-        eventsStaturDay.append(Event(title: "Event 3 - Saturday", description: "Description of Event 3 - Saturday", address: "Võ văn ngân"));
-        eventsStaturDay.append(Event(title: "Event 4 - Saturday", description: "Description of Event 4 - Saturday", address: "Võ văn ngân"));
-        eventsStaturDay.append(Event(title: "Event 5 - Saturday", description: "Description of Event 5 - Saturday", address: "Võ văn ngân"));
-        eventsStaturDay.append(Event(title: "Event 6 - Saturday", description: "Description of Event 6 - Saturday", address: "Võ văn ngân"));
-        eventsStaturDay.append(Event(title: "Event 7 - Saturday", description: "Description of Event 7 - Saturday", address: "Võ văn ngân"));
-        return EventInDay(day: "Saturday", includeEvents: eventsStaturDay)
+        events.append(Event(title: "Event 1 - Saturday", description: "Description of Event 1 - Saturday", address: "Võ văn ngân"));
+        events.append(Event(title: "Event 2 - Saturday", description: "Description of Event 2 - Saturday", address: "Võ văn ngân"));
+        events.append(Event(title: "Event 3 - Saturday", description: "Description of Event 3 - Saturday", address: "Võ văn ngân"));
+        events.append(Event(title: "Event 4 - Saturday", description: "Description of Event 4 - Saturday", address: "Võ văn ngân"));
+        events.append(Event(title: "Event 5 - Saturday", description: "Description of Event 5 - Saturday", address: "Võ văn ngân"));
+        events.append(Event(title: "Event 6 - Saturday", description: "Description of Event 6 - Saturday", address: "Võ văn ngân"));
+        events.append(Event(title: "Event 7 - Saturday", description: "Description of Event 7 - Saturday", address: "Võ văn ngân"));
+        return EventInDay(day: "Saturday", includeEvents: events)
         
     }
 

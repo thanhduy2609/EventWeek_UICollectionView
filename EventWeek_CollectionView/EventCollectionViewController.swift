@@ -12,7 +12,9 @@ private let reuseIdentifier = "Cell"
 
 class EventCollectionViewController: UICollectionViewController {
 
-    var eventInDays = EventInDay.eventInDays();
+    lazy var eventInDays: [EventInDay] = {
+        return EventInDay.eventInDays()
+    }()
 
     
     struct StoryBoard {
@@ -46,7 +48,30 @@ class EventCollectionViewController: UICollectionViewController {
         super.viewWillAppear(true)
         
         if Constants.isLoadDataAgain{
-            eventInDays = EventInDay.eventInDays()
+            let day: String = Constants.day;
+            let event: Event = Constants.event
+            if day == "Monday" {
+                eventInDays[0].events.append(event);
+            }
+            else if day == "Tuesday" {
+                eventInDays[1].events.append(event)
+            }
+            else if day == "Wednesday" {
+                eventInDays[2].events.append(event)
+            }
+            else if day == "Thursday" {
+                eventInDays[3].events.append(event)
+            }
+            else if day == "Friday" {
+                eventInDays[4].events.append(event)
+            }
+            else if day == "Saturday" {
+                eventInDays[5].events.append(event)
+            }
+            else  {
+                eventInDays[6].events.append(event)
+            }
+           // eventInDays = EventInDay.eventInDays()
             collectionView?.reloadData()
             Constants.isLoadDataAgain = false;
 

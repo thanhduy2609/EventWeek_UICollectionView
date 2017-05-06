@@ -9,4 +9,6 @@
 import Foundation
 class Constants{
     static var isLoadDataAgain = false;
+    static var event: Event!;
+    static var day: String!;
 }

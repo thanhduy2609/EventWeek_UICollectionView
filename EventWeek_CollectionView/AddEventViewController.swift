@@ -17,11 +17,9 @@ class AddEventViewController: UIViewController {
     
     @IBAction func btnSave(_ sender: UIBarButtonItem) {
          Constants.isLoadDataAgain = true;
-        let event: Event = Event(title: "A", description: "B", address: "C")
-        EventInDay.addMoreEvent(event: event, day: "Monday");
-        
-       
-    
+        let event: Event = Event(title: txtTitle.text!, description: txtDescription.text!, address: txtAddress.text!)
+        Constants.event = event;
+        Constants.day = Date().dayOfWeek()
     }
     
     override func viewDidLoad() {
