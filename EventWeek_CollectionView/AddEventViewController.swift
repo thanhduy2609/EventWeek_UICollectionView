@@ -16,10 +16,22 @@ class AddEventViewController: UIViewController {
     @IBOutlet weak var lblDay: UILabel!
     
     @IBAction func btnSave(_ sender: UIBarButtonItem) {
-         Constants.isLoadDataAgain = true;
-        let event: Event = Event(title: txtTitle.text!, description: txtDescription.text!, address: txtAddress.text!)
-        Constants.event = event;
-        Constants.day = Date().dayOfWeek()
+        if (txtTitle.text!.isEmpty || txtDescription.text!.isEmpty || txtAddress.text!.isEmpty){
+            //create alert
+            let alert = UIAlertController(title: "Thông Báo", message: "Bạn phải nhập đầy đủ thông tin", preferredStyle: UIAlertControllerStyle.alert);
+            //add an action
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil));
+            //show alert
+            self.present(alert, animated: true, completion: nil);
+        }
+        else {
+            Constants.isLoadDataAgain = true;
+            let event: Event = Event(title: txtTitle.text!, description: txtDescription.text!, address: txtAddress.text!)
+            Constants.event = event;
+            Constants.day = Date().dayOfWeek()
+            self.navigationController?.popViewController(animated: true)
+        }
+        
     }
     
     override func viewDidLoad() {
