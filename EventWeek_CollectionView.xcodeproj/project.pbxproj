@@ -20,6 +20,8 @@
 		3069FAA51EB8E7090087AD66 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069FAA41EB8E7090087AD66 /* EventCell.swift */; };
 		3069FAA81EB8E7CE0087AD66 /* EventCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069FAA71EB8E7CE0087AD66 /* EventCollectionViewController.swift */; };
 		3069FAAA1EB8F1030087AD66 /* DetailEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069FAA91EB8F1030087AD66 /* DetailEventViewController.swift */; };
+		30C176D61EBD7ED20043F8F6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C176D51EBD7ED20043F8F6 /* Constants.swift */; };
+		30C56C771EBCD1E40033F9C6 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C56C761EBCD1E40033F9C6 /* AddEventViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		3069FAA41EB8E7090087AD66 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		3069FAA71EB8E7CE0087AD66 /* EventCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionViewController.swift; sourceTree = "<group>"; };
 		3069FAA91EB8F1030087AD66 /* DetailEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailEventViewController.swift; sourceTree = "<group>"; };
+		30C176D51EBD7ED20043F8F6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		30C56C761EBCD1E40033F9C6 /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 				3069FA751EB8E32D0087AD66 /* Assets.xcassets */,
 				3069FA771EB8E32D0087AD66 /* LaunchScreen.storyboard */,
 				3069FA7A1EB8E32D0087AD66 /* Info.plist */,
+				30C176D51EBD7ED20043F8F6 /* Constants.swift */,
 			);
 			path = EventWeek_CollectionView;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 			children = (
 				3069FAA91EB8F1030087AD66 /* DetailEventViewController.swift */,
 				3069FAA71EB8E7CE0087AD66 /* EventCollectionViewController.swift */,
+				30C56C761EBCD1E40033F9C6 /* AddEventViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -306,8 +312,10 @@
 				3069FA9F1EB8E3570087AD66 /* Event.swift in Sources */,
 				3069FAA01EB8E3570087AD66 /* EventInDay.swift in Sources */,
 				3069FAA51EB8E7090087AD66 /* EventCell.swift in Sources */,
+				30C176D61EBD7ED20043F8F6 /* Constants.swift in Sources */,
 				3069FAA81EB8E7CE0087AD66 /* EventCollectionViewController.swift in Sources */,
 				3069FAAA1EB8F1030087AD66 /* DetailEventViewController.swift in Sources */,
+				30C56C771EBCD1E40033F9C6 /* AddEventViewController.swift in Sources */,
 				3069FA6F1EB8E32D0087AD66 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

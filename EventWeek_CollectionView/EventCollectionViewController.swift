@@ -13,6 +13,7 @@ private let reuseIdentifier = "Cell"
 class EventCollectionViewController: UICollectionViewController {
 
     var eventInDays = EventInDay.eventInDays();
+
     
     struct StoryBoard {
         static let headerView = "HeaderView"
@@ -33,6 +34,7 @@ class EventCollectionViewController: UICollectionViewController {
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
+        
         }
 
     override func didReceiveMemoryWarning() {
@@ -40,18 +42,32 @@ class EventCollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        if Constants.isLoadDataAgain{
+            eventInDays = EventInDay.eventInDays()
+            collectionView?.reloadData()
+            Constants.isLoadDataAgain = false;
+
+        }
+    }
+    
     //MARK: UICollectionViewDataSouce
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        //return EventInDay.eventInDays().count
         return eventInDays.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //return EventInDay.eventInDays()[section].events.count
         return eventInDays[section].events.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryBoard.eventCell, for: indexPath) as! EventCell
         
+        //let event = EventInDay.eventInDays()[indexPath.section].events[indexPath.row];
         let event = eventInDays[indexPath.section].events[indexPath.item];
         
         cell.configCellWith(event: event)
@@ -61,6 +77,7 @@ class EventCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: StoryBoard.headerView, for: indexPath) as! HeaderView
         
+        //let eventInDay = EventInDay.eventInDays()[indexPath.section]
         let eventInDay = eventInDays[indexPath.section];
         
         headerView.title = eventInDay.day
@@ -78,6 +95,7 @@ class EventCollectionViewController: UICollectionViewController {
             let detailVC = segue.destination as! DetailEventViewController
             let index = sender as! IndexPath
             
+            //let eventInDay = EventInDay.eventInDays()[index.section]
             let eventInDay = eventInDays[index.section];
             let event = eventInDay.events[index.item];
 
